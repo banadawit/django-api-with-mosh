@@ -30,3 +30,8 @@ django-api-with-mosh/
 ## 🙌 Acknowledgments
 This repository is based on concepts learned from **Mosh Hamedani's Django RESTful API course**.
 
+Feel free to contribute or fork the repository to enhance it further! 🚀
+
+---
+
+Feel free to contribute or fork the repository to enhance it further! 🚀
