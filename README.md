@@ -17,6 +17,13 @@ django-api-with-mosh/
 - Demonstrates how to create RESTful APIs using Django's function-based views.
 - Covers basics like CRUD operations, URL routing, and serialization.
 
+## ⚙️ Setup Instructions
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/banadawit/django-api-with-mosh.git
+   cd django-api-with-mosh
+   ```
 📝 Future Additions
 
 🔐 Authentication & Permissions
@@ -26,15 +33,6 @@ django-api-with-mosh/
 📡 API Testing with Postman
 
 🚀 Deployment Techniques
-
-## ⚙️ Setup Instructions
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/banadawit/django-api-with-mosh.git
-   cd django-api-with-mosh
-   ```
-
 
 ## 🙌 Acknowledgments
 This repository is based on concepts learned from **Mosh Hamedani's Django RESTful API course**.
