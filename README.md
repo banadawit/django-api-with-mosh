@@ -26,13 +26,13 @@ django-api-with-mosh/
    ```
 📝 Future Additions
 
-🔐 Authentication & Permissions
-
-📊 Pagination & Filtering
-
-📡 API Testing with Postman
-
-🚀 Deployment Techniques
+      🔐 Authentication & Permissions
+      
+      📊 Pagination & Filtering
+      
+      📡 API Testing with Postman
+      
+      🚀 Deployment Techniques
 
 ## 🙌 Acknowledgments
 This repository is based on concepts learned from **Mosh Hamedani's Django RESTful API course**.
