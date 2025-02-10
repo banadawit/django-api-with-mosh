@@ -19,10 +19,10 @@ class ProductViewSet(ModelViewSet):
     
     def destroy(self, request, *args, **kwargs):
         product = self.get_object()
-        if product.order_items.count() > 0:
-            return Response({'error': 'Product cannot be deleted because it is associated with an order item.'}, status=status.HTTP_409_CONFLICT)                                                                               
-        # if OrderItem.objects.filter(product_id=kwargs['pk']).count() > 0:
-        #     return Response({'error': 'Product cannot be deleted because it is associated with an order item.'}, status=status.HTTP_409_CONFLICT)
+        # if product.order_items.count() > 0:
+        #     return Response({'error': 'Product cannot be deleted because it is associated with an order item.'}, status=status.HTTP_409_CONFLICT)                                                                               
+        if OrderItem.objects.filter(product_id=kwargs['pk']).count() > 0:
+            return Response({'error': 'Product cannot be deleted because it is associated with an order item.'}, status=status.HTTP_409_CONFLICT)
         return super().destroy(request, *args, **kwargs)    
 
 # below code will do the same as above code but in a different way by using APIView
