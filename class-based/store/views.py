@@ -6,9 +6,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView   
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import status
-from .models import Product, Collection, OrderItem
+from .models import Product, Collection, OrderItem, Review
 from django.db.models import Count
-from .serializers import ProductSerializer, CollectionSerializer
+from .serializers import ProductSerializer, CollectionSerializer, ReviewSerializer
 
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
@@ -63,4 +63,14 @@ class CollectionViewSet(ModelViewSet):
                 {'error': 'Product cannot be deleted because it is associated with an order item.'},
                   status=status.HTTP_409_CONFLICT)
         return super().destroy(request, *args, **kwargs)
-    
+
+class ReviewViewSet(ModelViewSet):
+    # queryset = Review.objects.all()
+    serializer_class = ReviewSerializer
+
+    # This method filters reviews based on the product ID provided in the URL.
+    def get_queryset(self):
+        return Review.objects.filter(product_id=self.kwargs['product_pk'])
+
+    def get_serializer_context(self):
+        return {'request': self.request}
