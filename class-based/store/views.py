@@ -8,7 +8,7 @@ from rest_framework import status
 from .models import Product, Collection, OrderItem, Review
 from django.db.models import Count
 from .serializers import ProductSerializer, CollectionSerializer, ReviewSerializer
-
+ 
 class ProductViewSet(ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -64,12 +64,11 @@ class CollectionViewSet(ModelViewSet):
         return super().destroy(request, *args, **kwargs)
 
 class ReviewViewSet(ModelViewSet):
-    # queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
     # This method filters reviews based on the product ID provided in the URL.
     def get_queryset(self):
-        return Review.objects.filter(product_id=self.kwargs['product_pk'])
+        return Review.objects.filter(product_id=self.kwargs['product_pk']).select_related('product')
 
     def get_serializer_context(self):
         return {'request': self.request}
