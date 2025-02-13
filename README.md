@@ -17,6 +17,10 @@ django-api-with-mosh/
 - Demonstrates how to create RESTful APIs using Django's function-based views.
 - Covers basics like CRUD operations, URL routing, and serialization.
 
+### 2️⃣ Class-Based Views (CBV)
+- Showcases the use of Django's class-based views for building RESTful APIs.
+- Focuses on reusability, inheritance, and clean code practices.
+
 ## ⚙️ Setup Instructions
 
 1. **Clone the repository:**
