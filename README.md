@@ -20,6 +20,7 @@ django-api-with-mosh/
 ### 2️⃣ Class-Based Views (CBV)
 - Showcases the use of Django's class-based views for building RESTful APIs.
 - Focuses on reusability, inheritance, and clean code practices.
+ 📊 Pagination & Filtering
 
 ## ⚙️ Setup Instructions
 
@@ -31,8 +32,6 @@ django-api-with-mosh/
 📝 Future Additions
 
       🔐 Authentication & Permissions
-      
-      📊 Pagination & Filtering
       
       📡 API Testing with Postman
       
