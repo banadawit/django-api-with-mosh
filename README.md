@@ -29,6 +29,11 @@ django-api-with-mosh/
    git clone https://github.com/banadawit/django-api-with-mosh.git
    cd django-api-with-mosh
    ```
+2. **Set up a virtual environment:**
+   ```bash
+   python -m venv venv
+   On Windows: venv\Scripts\activate  # On Mac: source venv/bin/activate
+   ```
 📝 Future Additions
 
       🔐 Authentication & Permissions
